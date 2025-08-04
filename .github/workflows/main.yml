@@ -89,7 +89,7 @@ jobs:
         aws-region: ${{ env.AWS_REGION }}
 
     - name: get kube config file
-      run: aws eks update-kubeconfig --name ${{ env.EKS_CLUSTER }} --region ${{ env.AWS_REGION }}
+      run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER }}
 
     - name: print kube config file
       run: cat ~/.kube/config
