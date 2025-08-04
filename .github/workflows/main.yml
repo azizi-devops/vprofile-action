@@ -100,12 +100,12 @@ jobs:
     - name: Deploy Helm
       uses: bitovi/github-actions-deploy-eks-helm@v1.2.8
       with:
-        aws-access-key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.AWS_REGION }}
         cluster-name: ${{ env.EKS_CLUSTER }}
         chart-path: ./helm/vprofilecharts
         namespace: default
-        values: appimage=${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }},apptag={{github.run_number}}
+        values: appimage=${{ secrets.REGISTRY }}/${{ env.ECR_REPOSITORY }},apptag=${{github.run_number}}
         name: vprofile-stack
         
