@@ -98,7 +98,7 @@ jobs:
       run: kubectl create secret docker-registry regcred --docker-server=${{ secrets.REGISTRY }} --docker-username=AWS --docker-password=$(aws ecr get-login-password)
       
     - name: Deploy Helm
-      run: bitovi/github-actions-deploy-eks-helm@v1.2.8
+      uses: bitovi/github-actions-deploy-eks-helm@v1.2.8
       with:
         aws_access-key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
