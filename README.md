@@ -99,7 +99,7 @@ To expose the app publicly:
 ---
 
 ## 📂 Source Code Repositories
-- **Infrastructure (Terraform):** [iac-vprofile](https://github.com/azizi-devops/iac-vprofile)  
+- **Infrastructure (Terraform):** [iac-vprofile](https://github.com/azizi-devops/IAC-Vprofile)  
 - **Application Code & CI/CD:** [vprofile-action](https://github.com/azizi-devops/vprofile-action)  
 
 ---
